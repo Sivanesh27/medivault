@@ -1,0 +1,21 @@
+appointment_html = '''
+<!DOCTYPE html>
+<html>
+<head><title>Book Appointment</title></head>
+<body>
+<h2>Book an Appointment</h2>
+<form method="POST">
+    Doctor:
+    <select name="doctor_id">
+        {% for doctor in doctors %}
+        <option value="{{ doctor.id }}">{{ doctor.email }}</option>
+        {% endfor %}
+    </select><br>
+    Date: <input type="date" name="date" required><br>
+    Time: <input type="time" name="time" required><br>
+    <button type="submit">Book</button>
+</form>
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
+'''
