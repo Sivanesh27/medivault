@@ -159,3 +159,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
+import os
+TEMPLATE_DIR = os.path.join(os.getcwd(), 'templates')
+os.makedirs(TEMPLATE_DIR, exist_ok=True)
+with open(os.path.join(TEMPLATE_DIR, 'upload.html'), 'w') as f: f.write(upload_html)
+with open(os.path.join(TEMPLATE_DIR, 'appointment.html'), 'w') as f: f.write(appointment_html)
+with open(os.path.join(TEMPLATE_DIR, 'doctor_appointments.html'), 'w') as f: f.write(doctor_appointments_html)
+with open(os.path.join(TEMPLATE_DIR, 'chatbot.html'), 'w') as f: f.write(chatbot_html)
+with open(os.path.join(TEMPLATE_DIR, 'pharmacy.html'), 'w') as f: f.write(pharmacy_html)
