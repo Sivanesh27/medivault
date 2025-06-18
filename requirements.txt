@@ -1,9 +1,9 @@
-Flask==2.3.3
-Flask-Login==0.6.3
-Flask-SQLAlchemy==3.1.1
-Werkzeug==2.3.8
-python-dotenv==1.0.1
-openai==1.30.1         
-pydicom==2.4.4         
-Pillow==9.5.0     
+Flask
+Flask-Login
+Flask-SQLAlchemy
+Werkzeug
+python-dotenv
+openai       
+pydicom     
+Pillow    
 
