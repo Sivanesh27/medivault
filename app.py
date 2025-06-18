@@ -172,8 +172,8 @@ with open(os.path.join(TEMPLATE_DIR, 'dicom_viewer.html'), 'w') as f: f.write(di
 
 import os
 
+
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Default to 5000 if PORT is not set
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=5000)
 
 
