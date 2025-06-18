@@ -1,15 +1,12 @@
-doctor_appointments_html = '''
-<!DOCTYPE html>
-<html>
-<head><title>Doctor Appointments</title></head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Doctor Appointments{% endblock %}
+{% block content %}
 <h2>Your Appointments</h2>
-<ul>
+<ul class="list-group">
 {% for appt in appointments %}
-    <li>Patient ID: {{ appt.patient_id }} | Date: {{ appt.date }} | Time: {{ appt.time }} | Status: {{ appt.status }}</li>
+    <li class="list-group-item">Patient ID: {{ appt.patient_id }} | Date: {{ appt.date }} | Time: {{ appt.time }} | Status: {{ appt.status }}</li>
 {% endfor %}
 </ul>
-<a href="/dashboard">Back to Dashboard</a>
-</body>
-</html>
+<a href="/dashboard" class="btn btn-link mt-2">Back to Dashboard</a>
+{% endblock %}
 '''
