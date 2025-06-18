@@ -1,11 +1,9 @@
 chatbot_html = '''
-<!DOCTYPE html>
-<html>
-<head><title>Healthcare Chatbot</title></head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Healthcare Chatbot{% endblock %}
+{% block content %}
 <h2>Chat with MediVault AI</h2>
 <p>(Chatbot integration placeholder)</p>
-<a href="/dashboard">Back to Dashboard</a>
-</body>
-</html>
+<a href="/dashboard" class="btn btn-link">Back to Dashboard</a>
+{% endblock %}
 '''
