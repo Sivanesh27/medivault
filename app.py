@@ -173,8 +173,10 @@ with open(os.path.join(TEMPLATE_DIR, 'dicom_viewer.html'), 'w') as f: f.write(di
 import os
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))  # default can be anything, Render will override
-    app.run(host='0.0.0.0', port=port, debug=True)
+    with app.app_context():
+        db.create_all()
+    port = int(os.environ.get('PORT', 10000))  # Render provides this
+    app.run(host='0.0.0.0', port=port, debug=True)  # ✅ Correctly exposed
 
 
 
