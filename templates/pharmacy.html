@@ -1,13 +1,16 @@
-{% extends 'base.html' %}
-{% block title %}Online Pharmacy{% endblock %}
-{% block content %}
+pharmacy_html = '''
+<!DOCTYPE html>
+<html>
+<head><title>Online Pharmacy</title></head>
+<body>
 <h2>Available Medicines</h2>
-<ul class="list-group">
-    <li class="list-group-item">Paracetamol 500mg - ₹20</li>
-    <li class="list-group-item">Amoxicillin 250mg - ₹45</li>
-    <li class="list-group-item">Vitamin D3 - ₹100</li>
-    <li class="list-group-item"><em>More to be added...</em></li>
+<ul>
+    <li>Paracetamol 500mg - ₹20</li>
+    <li>Amoxicillin 250mg - ₹45</li>
+    <li>Vitamin D3 - ₹100</li>
+    <li><em>More to be added...</em></li>
 </ul>
-<a href="/dashboard" class="btn btn-link mt-2">Back to Dashboard</a>
-{% endblock %}
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
 '''
