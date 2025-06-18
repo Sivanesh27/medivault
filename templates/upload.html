@@ -1,0 +1,12 @@
+upload_html = '''
+{% extends 'base.html' %}
+{% block title %}Upload Medical Record{% endblock %}
+{% block content %}
+<h2>Upload Your Medical Record</h2>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" class="form-control" required>
+    <button type="submit" class="btn btn-success mt-2">Upload</button>
+</form>
+<a href="/dashboard" class="btn btn-link">Back to Dashboard</a>
+{% endblock %}
+'''
