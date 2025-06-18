@@ -1,0 +1,13 @@
+dicom_viewer_html = '''
+<!DOCTYPE html>
+<html>
+<head><title>DICOM Viewer</title></head>
+<body>
+<h2>Uploaded Medical Images</h2>
+{% for img_path in image_paths %}
+    <img src="{{ url_for('static', filename=img_path) }}" width="300"><br>
+{% endfor %}
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
+'''
