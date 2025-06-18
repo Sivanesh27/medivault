@@ -1,21 +1,26 @@
-appointment_html = '''
-<!DOCTYPE html>
-<html>
-<head><title>Book Appointment</title></head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Book Appointment{% endblock %}
+{% block content %}
 <h2>Book an Appointment</h2>
 <form method="POST">
-    Doctor:
-    <select name="doctor_id">
-        {% for doctor in doctors %}
-        <option value="{{ doctor.id }}">{{ doctor.email }}</option>
-        {% endfor %}
-    </select><br>
-    Date: <input type="date" name="date" required><br>
-    Time: <input type="time" name="time" required><br>
-    <button type="submit">Book</button>
+    <div class="mb-3">
+        <label for="doctor_id" class="form-label">Doctor:</label>
+        <select name="doctor_id" class="form-select">
+            {% for doctor in doctors %}
+            <option value="{{ doctor.id }}">{{ doctor.email }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Date:</label>
+        <input type="date" name="date" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Time:</label>
+        <input type="time" name="time" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Book</button>
 </form>
-<a href="/dashboard">Back to Dashboard</a>
-</body>
-</html>
+<a href="/dashboard" class="btn btn-link">Back to Dashboard</a>
+{% endblock %}
 '''
