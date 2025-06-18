@@ -170,7 +170,6 @@ with open(os.path.join(TEMPLATE_DIR, 'chatbot.html'), 'w') as f: f.write(chatbot
 with open(os.path.join(TEMPLATE_DIR, 'pharmacy.html'), 'w') as f: f.write(pharmacy_html)
 with open(os.path.join(TEMPLATE_DIR, 'dicom_viewer.html'), 'w') as f: f.write(dicom_viewer_html)
 
-import os
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Get the port from environment
     app.run(host='0.0.0.0', port=port, debug=True)  # Bind to 0.0.0.0
